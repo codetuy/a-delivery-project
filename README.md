@@ -1,22 +1,24 @@
-# a-delivery-project
+# Agente de Pesquisa aplicada à determinação do Trajeto de um Robô
 
 
 Objetivo:
-Agente que determina o percurso a realizar para efetuar a recolha e entrega de encomendas entre pontos de uma
-cidade.
+Agente para determinar o melhor percurso a realizar por um robô, que se movimenta num espaço conhecido onde
+deve recolher objetos, procurando minimizar a distância percorrida.
 
 Descrição:
-Uma empresa de correio expresso possui uma carrinha de distribuição, inicialmente estacionada na garagem da
-empresa. A carrinha tem uma determinada autonomia (combustível), e capacidade máxima de carga (espaço). Cada
-encomenda tem um determinado volume, um ponto de recolha e um ponto de entrega na cidade. Dado um
-conjunto de encomendas, pretende-se determinar qual o caminho ótimo a percorrer, de forma a minimizar o espaço
-percorrido, e garantindo que a carrinha nunca fica sem combustível (poderá abastecer em locais próprios
-distribuídos no mapa).
+Numa fábrica existe um robô responsável pela recolha de caixas, que se encontram espalhadas pela fábrica, que são
+depois colocadas no armazém. O robô possui capacidade limitada, pelo que pode ter de efetuar mais que uma
+viagem até ao armazém para depositar todas as caixas. O robô possui dimensão e pode andar em frente ou rodar,
+parado, em qualquer direção.
 
-A cidade é representada por um grafo. O mapa relativo à cidade deve ser editável. O trabalho deve ser testado em
-instâncias do problema de diferentes dimensões, crescentemente complexas.
-A determinação do percurso a realizar pela ambulância deve ser efetuada através da utilização do algoritmo de
-pesquisa heurística A*.
+O espaço onde o robô se movimenta (fábrica) é conhecido e contém obstáculos (de posição também conhecida),
+que o robô terá de contornar. A localização das caixas a recolher é conhecida. A localização do armazém também é
+conhecida. Deve ser possível especificar o espaço onde o robô se movimenta (posição dos obstáculos), a posição de
+todas as caixas a recolher, a posição do armazém e a posição inicial do robô
+
+Devem ser utilizados métodos de pesquisa informada (nomeadamente A*) para encontrar o melhor percurso a
+realizar pelo robô. O melhor percurso é aquele que minimiza a distancia que o robô percorre até que deposita a
+última caixa no armazém.
 
 Ferramentas:
 Java ou Java + Jade ou Python
